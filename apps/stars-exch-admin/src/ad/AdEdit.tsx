@@ -33,6 +33,7 @@ export const AdEdit = (props: EditProps): React.ReactElement => {
         >
           <SelectArrayInput optionText={ServiceTitle} />
         </ReferenceArrayInput>
+        <NumberInput step={1} label="prismaService" source="prismaService" />
       </SimpleForm>
     </Edit>
   );

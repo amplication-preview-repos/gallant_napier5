@@ -54,6 +54,8 @@ export class TransactionControllerBase {
             id: true,
           },
         },
+
+        prismaService: true,
       },
     });
   }
@@ -79,6 +81,8 @@ export class TransactionControllerBase {
             id: true,
           },
         },
+
+        prismaService: true,
       },
     });
   }
@@ -105,6 +109,8 @@ export class TransactionControllerBase {
             id: true,
           },
         },
+
+        prismaService: true,
       },
     });
     if (result === null) {
@@ -148,6 +154,8 @@ export class TransactionControllerBase {
               id: true,
             },
           },
+
+          prismaService: true,
         },
       });
     } catch (error) {
@@ -183,6 +191,8 @@ export class TransactionControllerBase {
               id: true,
             },
           },
+
+          prismaService: true,
         },
       });
     } catch (error) {

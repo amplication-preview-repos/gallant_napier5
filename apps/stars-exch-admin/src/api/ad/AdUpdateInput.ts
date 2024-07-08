@@ -7,4 +7,5 @@ export type AdUpdateInput = {
   price?: number | null;
   user?: UserWhereUniqueInput | null;
   services?: ServiceUpdateManyWithoutAdsInput;
+  prismaService?: number | null;
 };

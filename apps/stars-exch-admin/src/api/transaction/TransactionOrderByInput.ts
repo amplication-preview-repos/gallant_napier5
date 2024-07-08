@@ -9,4 +9,5 @@ export type TransactionOrderByInput = {
   buyer?: SortOrder;
   seller?: SortOrder;
   serviceId?: SortOrder;
+  prismaService?: SortOrder;
 };

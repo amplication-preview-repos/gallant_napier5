@@ -7,4 +7,5 @@ export type ServiceOrderByInput = {
   name?: SortOrder;
   description?: SortOrder;
   adId?: SortOrder;
+  prismaService?: SortOrder;
 };

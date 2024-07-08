@@ -16,6 +16,7 @@ import { Type } from "class-transformer";
 import { IsOptional, ValidateNested } from "class-validator";
 import { StringNullableFilter } from "../../util/StringNullableFilter";
 import { AdListRelationFilter } from "../../ad/base/AdListRelationFilter";
+import { IntNullableFilter } from "../../util/IntNullableFilter";
 
 @InputType()
 class UserWhereInput {
@@ -85,6 +86,17 @@ class UserWhereInput {
     nullable: true,
   })
   ads?: AdListRelationFilter;
+
+  @ApiProperty({
+    required: false,
+    type: IntNullableFilter,
+  })
+  @Type(() => IntNullableFilter)
+  @IsOptional()
+  @Field(() => IntNullableFilter, {
+    nullable: true,
+  })
+  prismaService?: IntNullableFilter;
 }
 
 export { UserWhereInput as UserWhereInput };

@@ -10,4 +10,5 @@ export type Ad = {
   price: number | null;
   user?: User | null;
   services?: Array<Service>;
+  prismaService: number | null;
 };

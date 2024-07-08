@@ -22,6 +22,7 @@ import {
   IsEnum,
   MaxLength,
   ValidateNested,
+  IsInt,
 } from "class-validator";
 
 import { Type } from "class-transformer";
@@ -110,6 +111,19 @@ class Transaction {
   @Type(() => Service)
   @IsOptional()
   service?: Service | null;
+
+  @ApiProperty({
+    required: false,
+    type: Number,
+  })
+  @IsInt()
+  @Min(-999999999)
+  @Max(999999999)
+  @IsOptional()
+  @Field(() => Number, {
+    nullable: true,
+  })
+  prismaService!: number | null;
 }
 
 export { Transaction as Transaction };

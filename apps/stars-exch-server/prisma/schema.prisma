@@ -8,51 +8,55 @@ generator client {
 }
 
 model Service {
-  id           String        @id @default(cuid())
-  createdAt    DateTime      @default(now())
-  updatedAt    DateTime      @updatedAt
-  name         String?
-  description  String?
-  ad           Ad?           @relation(fields: [adId], references: [id])
-  adId         String?
-  transactions Transaction[]
+  id            String        @id @default(cuid())
+  createdAt     DateTime      @default(now())
+  updatedAt     DateTime      @updatedAt
+  name          String?
+  description   String?
+  ad            Ad?           @relation(fields: [adId], references: [id])
+  adId          String?
+  transactions  Transaction[]
+  prismaService Int?
 }
 
 model Ad {
-  id          String    @id @default(cuid())
-  createdAt   DateTime  @default(now())
-  updatedAt   DateTime  @updatedAt
-  title       String?
-  description String?
-  price       Float?
-  user        User?     @relation(fields: [userId], references: [id])
-  userId      String?
-  services    Service[]
+  id            String    @id @default(cuid())
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+  title         String?
+  description   String?
+  price         Float?
+  user          User?     @relation(fields: [userId], references: [id])
+  userId        String?
+  services      Service[]
+  prismaService Int?
 }
 
 model Transaction {
-  id        String                 @id @default(cuid())
-  createdAt DateTime               @default(now())
-  updatedAt DateTime               @updatedAt
-  amount    Float?
-  status    EnumTransactionStatus?
-  buyer     String?
-  seller    String?
-  service   Service?               @relation(fields: [serviceId], references: [id])
-  serviceId String?
+  id            String                 @id @default(cuid())
+  createdAt     DateTime               @default(now())
+  updatedAt     DateTime               @updatedAt
+  amount        Float?
+  status        EnumTransactionStatus?
+  buyer         String?
+  seller        String?
+  service       Service?               @relation(fields: [serviceId], references: [id])
+  serviceId     String?
+  prismaService Int?
 }
 
 model User {
-  id        String   @id @default(cuid())
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
-  firstName String?
-  lastName  String?
-  username  String   @unique
-  email     String?  @unique
-  password  String
-  roles     Json
-  ads       Ad[]
+  id            String   @id @default(cuid())
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+  firstName     String?
+  lastName      String?
+  username      String   @unique
+  email         String?  @unique
+  password      String
+  roles         Json
+  ads           Ad[]
+  prismaService Int?
 }
 
 enum EnumTransactionStatus {

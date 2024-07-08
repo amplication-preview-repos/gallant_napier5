@@ -25,6 +25,7 @@ export const UserShow = (props: ShowProps): React.ReactElement => {
         <TextField label="Username" source="username" />
         <TextField label="Email" source="email" />
         <TextField label="Roles" source="roles" />
+        <TextField label="prismaService" source="prismaService" />
         <ReferenceManyField reference="Ad" target="userId" label="Ads">
           <Datagrid rowClick="show">
             <TextField label="ID" source="id" />
@@ -36,6 +37,7 @@ export const UserShow = (props: ShowProps): React.ReactElement => {
             <ReferenceField label="user" source="user.id" reference="User">
               <TextField source={USER_TITLE_FIELD} />
             </ReferenceField>
+            <TextField label="prismaService" source="prismaService" />
           </Datagrid>
         </ReferenceManyField>
       </SimpleShowLayout>

@@ -55,6 +55,8 @@ export class ServiceControllerBase {
             id: true,
           },
         },
+
+        prismaService: true,
       },
     });
   }
@@ -78,6 +80,8 @@ export class ServiceControllerBase {
             id: true,
           },
         },
+
+        prismaService: true,
       },
     });
   }
@@ -102,6 +106,8 @@ export class ServiceControllerBase {
             id: true,
           },
         },
+
+        prismaService: true,
       },
     });
     if (result === null) {
@@ -143,6 +149,8 @@ export class ServiceControllerBase {
               id: true,
             },
           },
+
+          prismaService: true,
         },
       });
     } catch (error) {
@@ -176,6 +184,8 @@ export class ServiceControllerBase {
               id: true,
             },
           },
+
+          prismaService: true,
         },
       });
     } catch (error) {
@@ -211,6 +221,8 @@ export class ServiceControllerBase {
             id: true,
           },
         },
+
+        prismaService: true,
       },
     });
     if (results === null) {

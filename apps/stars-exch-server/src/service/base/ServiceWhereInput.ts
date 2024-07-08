@@ -17,6 +17,7 @@ import { IsOptional, ValidateNested } from "class-validator";
 import { StringNullableFilter } from "../../util/StringNullableFilter";
 import { AdWhereUniqueInput } from "../../ad/base/AdWhereUniqueInput";
 import { TransactionListRelationFilter } from "../../transaction/base/TransactionListRelationFilter";
+import { IntNullableFilter } from "../../util/IntNullableFilter";
 
 @InputType()
 class ServiceWhereInput {
@@ -76,6 +77,17 @@ class ServiceWhereInput {
     nullable: true,
   })
   transactions?: TransactionListRelationFilter;
+
+  @ApiProperty({
+    required: false,
+    type: IntNullableFilter,
+  })
+  @Type(() => IntNullableFilter)
+  @IsOptional()
+  @Field(() => IntNullableFilter, {
+    nullable: true,
+  })
+  prismaService?: IntNullableFilter;
 }
 
 export { ServiceWhereInput as ServiceWhereInput };

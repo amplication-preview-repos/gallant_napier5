@@ -95,6 +95,17 @@ class AdOrderByInput {
     nullable: true,
   })
   userId?: SortOrder;
+
+  @ApiProperty({
+    required: false,
+    enum: ["asc", "desc"],
+  })
+  @IsOptional()
+  @IsEnum(SortOrder)
+  @Field(() => SortOrder, {
+    nullable: true,
+  })
+  prismaService?: SortOrder;
 }
 
 export { AdOrderByInput as AdOrderByInput };

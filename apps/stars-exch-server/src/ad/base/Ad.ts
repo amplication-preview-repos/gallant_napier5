@@ -21,6 +21,7 @@ import {
   Min,
   Max,
   ValidateNested,
+  IsInt,
 } from "class-validator";
 
 import { Type } from "class-transformer";
@@ -107,6 +108,19 @@ class Ad {
   @Type(() => Service)
   @IsOptional()
   services?: Array<Service>;
+
+  @ApiProperty({
+    required: false,
+    type: Number,
+  })
+  @IsInt()
+  @Min(-999999999)
+  @Max(999999999)
+  @IsOptional()
+  @Field(() => Number, {
+    nullable: true,
+  })
+  prismaService!: number | null;
 }
 
 export { Ad as Ad };

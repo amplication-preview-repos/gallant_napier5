@@ -23,6 +23,7 @@ export const TransactionShow = (props: ShowProps): React.ReactElement => {
         <ReferenceField label="service" source="service.id" reference="Service">
           <TextField source={SERVICE_TITLE_FIELD} />
         </ReferenceField>
+        <TextField label="prismaService" source="prismaService" />
       </SimpleShowLayout>
     </Show>
   );

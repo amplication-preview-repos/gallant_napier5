@@ -9,4 +9,5 @@ export type UserUpdateInput = {
   password?: string;
   roles?: InputJsonValue;
   ads?: AdUpdateManyWithoutUsersInput;
+  prismaService?: number | null;
 };

@@ -42,6 +42,7 @@ export class UserControllerBase {
         username: true,
         email: true,
         roles: true,
+        prismaService: true,
       },
     });
   }
@@ -62,6 +63,7 @@ export class UserControllerBase {
         username: true,
         email: true,
         roles: true,
+        prismaService: true,
       },
     });
   }
@@ -83,6 +85,7 @@ export class UserControllerBase {
         username: true,
         email: true,
         roles: true,
+        prismaService: true,
       },
     });
     if (result === null) {
@@ -113,6 +116,7 @@ export class UserControllerBase {
           username: true,
           email: true,
           roles: true,
+          prismaService: true,
         },
       });
     } catch (error) {
@@ -143,6 +147,7 @@ export class UserControllerBase {
           username: true,
           email: true,
           roles: true,
+          prismaService: true,
         },
       });
     } catch (error) {
@@ -177,6 +182,8 @@ export class UserControllerBase {
             id: true,
           },
         },
+
+        prismaService: true,
       },
     });
     if (results === null) {

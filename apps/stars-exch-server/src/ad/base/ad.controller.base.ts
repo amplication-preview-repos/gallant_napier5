@@ -54,6 +54,8 @@ export class AdControllerBase {
             id: true,
           },
         },
+
+        prismaService: true,
       },
     });
   }
@@ -78,6 +80,8 @@ export class AdControllerBase {
             id: true,
           },
         },
+
+        prismaService: true,
       },
     });
   }
@@ -101,6 +105,8 @@ export class AdControllerBase {
             id: true,
           },
         },
+
+        prismaService: true,
       },
     });
     if (result === null) {
@@ -143,6 +149,8 @@ export class AdControllerBase {
               id: true,
             },
           },
+
+          prismaService: true,
         },
       });
     } catch (error) {
@@ -177,6 +185,8 @@ export class AdControllerBase {
               id: true,
             },
           },
+
+          prismaService: true,
         },
       });
     } catch (error) {
@@ -210,6 +220,8 @@ export class AdControllerBase {
             id: true,
           },
         },
+
+        prismaService: true,
       },
     });
     if (results === null) {

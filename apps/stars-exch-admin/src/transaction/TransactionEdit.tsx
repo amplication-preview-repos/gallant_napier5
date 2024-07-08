@@ -30,6 +30,7 @@ export const TransactionEdit = (props: EditProps): React.ReactElement => {
         <ReferenceInput source="service.id" reference="Service" label="service">
           <SelectInput optionText={ServiceTitle} />
         </ReferenceInput>
+        <NumberInput step={1} label="prismaService" source="prismaService" />
       </SimpleForm>
     </Edit>
   );

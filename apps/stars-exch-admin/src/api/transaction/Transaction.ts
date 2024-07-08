@@ -9,4 +9,5 @@ export type Transaction = {
   buyer: string | null;
   seller: string | null;
   service?: Service | null;
+  prismaService: number | null;
 };

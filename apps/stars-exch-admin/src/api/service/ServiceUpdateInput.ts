@@ -6,4 +6,5 @@ export type ServiceUpdateInput = {
   description?: string | null;
   ad?: AdWhereUniqueInput | null;
   transactions?: TransactionUpdateManyWithoutServicesInput;
+  prismaService?: number | null;
 };

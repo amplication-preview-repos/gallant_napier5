@@ -11,4 +11,5 @@ export type User = {
   email: string | null;
   roles: JsonValue;
   ads?: Array<Ad>;
+  prismaService: number | null;
 };

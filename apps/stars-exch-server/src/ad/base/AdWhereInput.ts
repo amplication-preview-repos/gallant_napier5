@@ -18,6 +18,7 @@ import { StringNullableFilter } from "../../util/StringNullableFilter";
 import { FloatNullableFilter } from "../../util/FloatNullableFilter";
 import { UserWhereUniqueInput } from "../../user/base/UserWhereUniqueInput";
 import { ServiceListRelationFilter } from "../../service/base/ServiceListRelationFilter";
+import { IntNullableFilter } from "../../util/IntNullableFilter";
 
 @InputType()
 class AdWhereInput {
@@ -88,6 +89,17 @@ class AdWhereInput {
     nullable: true,
   })
   services?: ServiceListRelationFilter;
+
+  @ApiProperty({
+    required: false,
+    type: IntNullableFilter,
+  })
+  @Type(() => IntNullableFilter)
+  @IsOptional()
+  @Field(() => IntNullableFilter, {
+    nullable: true,
+  })
+  prismaService?: IntNullableFilter;
 }
 
 export { AdWhereInput as AdWhereInput };

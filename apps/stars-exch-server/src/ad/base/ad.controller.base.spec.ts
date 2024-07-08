@@ -24,6 +24,7 @@ const CREATE_INPUT = {
   title: "exampleTitle",
   description: "exampleDescription",
   price: 42.42,
+  prismaService: 42,
 };
 const CREATE_RESULT = {
   id: "exampleId",
@@ -32,6 +33,7 @@ const CREATE_RESULT = {
   title: "exampleTitle",
   description: "exampleDescription",
   price: 42.42,
+  prismaService: 42,
 };
 const FIND_MANY_RESULT = [
   {
@@ -41,6 +43,7 @@ const FIND_MANY_RESULT = [
     title: "exampleTitle",
     description: "exampleDescription",
     price: 42.42,
+    prismaService: 42,
   },
 ];
 const FIND_ONE_RESULT = {
@@ -50,6 +53,7 @@ const FIND_ONE_RESULT = {
   title: "exampleTitle",
   description: "exampleDescription",
   price: 42.42,
+  prismaService: 42,
 };
 
 const service = {

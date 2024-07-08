@@ -16,6 +16,9 @@ import {
   MaxLength,
   IsOptional,
   ValidateNested,
+  IsInt,
+  Min,
+  Max,
 } from "class-validator";
 import { AdWhereUniqueInput } from "../../ad/base/AdWhereUniqueInput";
 import { Type } from "class-transformer";
@@ -70,6 +73,19 @@ class ServiceUpdateInput {
     nullable: true,
   })
   transactions?: TransactionUpdateManyWithoutServicesInput;
+
+  @ApiProperty({
+    required: false,
+    type: Number,
+  })
+  @IsInt()
+  @Min(-999999999)
+  @Max(999999999)
+  @IsOptional()
+  @Field(() => Number, {
+    nullable: true,
+  })
+  prismaService?: number | null;
 }
 
 export { ServiceUpdateInput as ServiceUpdateInput };

@@ -16,6 +16,9 @@ import {
   MaxLength,
   IsOptional,
   ValidateNested,
+  IsInt,
+  Min,
+  Max,
 } from "class-validator";
 import { IsJSONValue } from "../../validators";
 import { GraphQLJSON } from "graphql-type-json";
@@ -94,6 +97,19 @@ class UserCreateInput {
     nullable: true,
   })
   ads?: AdCreateNestedManyWithoutUsersInput;
+
+  @ApiProperty({
+    required: false,
+    type: Number,
+  })
+  @IsInt()
+  @Min(-999999999)
+  @Max(999999999)
+  @IsOptional()
+  @Field(() => Number, {
+    nullable: true,
+  })
+  prismaService?: number | null;
 }
 
 export { UserCreateInput as UserCreateInput };

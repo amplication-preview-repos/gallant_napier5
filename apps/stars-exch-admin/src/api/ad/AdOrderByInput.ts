@@ -8,4 +8,5 @@ export type AdOrderByInput = {
   description?: SortOrder;
   price?: SortOrder;
   userId?: SortOrder;
+  prismaService?: SortOrder;
 };

@@ -6,4 +6,5 @@ export type ServiceCreateInput = {
   description?: string | null;
   ad?: AdWhereUniqueInput | null;
   transactions?: TransactionCreateNestedManyWithoutServicesInput;
+  prismaService?: number | null;
 };

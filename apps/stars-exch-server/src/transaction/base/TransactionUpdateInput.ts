@@ -21,6 +21,7 @@ import {
   IsString,
   MaxLength,
   ValidateNested,
+  IsInt,
 } from "class-validator";
 
 import { EnumTransactionStatus } from "./EnumTransactionStatus";
@@ -88,6 +89,19 @@ class TransactionUpdateInput {
     nullable: true,
   })
   service?: ServiceWhereUniqueInput | null;
+
+  @ApiProperty({
+    required: false,
+    type: Number,
+  })
+  @IsInt()
+  @Min(-999999999)
+  @Max(999999999)
+  @IsOptional()
+  @Field(() => Number, {
+    nullable: true,
+  })
+  prismaService?: number | null;
 }
 
 export { TransactionUpdateInput as TransactionUpdateInput };

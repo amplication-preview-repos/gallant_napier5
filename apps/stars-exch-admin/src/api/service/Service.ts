@@ -9,4 +9,5 @@ export type Service = {
   description: string | null;
   ad?: Ad | null;
   transactions?: Array<Transaction>;
+  prismaService: number | null;
 };

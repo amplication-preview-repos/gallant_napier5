@@ -18,6 +18,7 @@ import { FloatNullableFilter } from "../../util/FloatNullableFilter";
 import { EnumTransactionStatus } from "./EnumTransactionStatus";
 import { StringNullableFilter } from "../../util/StringNullableFilter";
 import { ServiceWhereUniqueInput } from "../../service/base/ServiceWhereUniqueInput";
+import { IntNullableFilter } from "../../util/IntNullableFilter";
 
 @InputType()
 class TransactionWhereInput {
@@ -87,6 +88,17 @@ class TransactionWhereInput {
     nullable: true,
   })
   service?: ServiceWhereUniqueInput;
+
+  @ApiProperty({
+    required: false,
+    type: IntNullableFilter,
+  })
+  @Type(() => IntNullableFilter)
+  @IsOptional()
+  @Field(() => IntNullableFilter, {
+    nullable: true,
+  })
+  prismaService?: IntNullableFilter;
 }
 
 export { TransactionWhereInput as TransactionWhereInput };

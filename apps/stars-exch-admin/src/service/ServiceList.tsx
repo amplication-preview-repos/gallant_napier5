@@ -28,6 +28,7 @@ export const ServiceList = (props: ListProps): React.ReactElement => {
         <ReferenceField label="ad" source="ad.id" reference="Ad">
           <TextField source={AD_TITLE_FIELD} />
         </ReferenceField>
+        <TextField label="prismaService" source="prismaService" />
       </Datagrid>
     </List>
   );

@@ -7,4 +7,5 @@ export type AdCreateInput = {
   price?: number | null;
   user?: UserWhereUniqueInput | null;
   services?: ServiceCreateNestedManyWithoutAdsInput;
+  prismaService?: number | null;
 };

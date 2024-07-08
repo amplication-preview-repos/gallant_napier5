@@ -26,6 +26,7 @@ export const ServiceShow = (props: ShowProps): React.ReactElement => {
         <ReferenceField label="ad" source="ad.id" reference="Ad">
           <TextField source={AD_TITLE_FIELD} />
         </ReferenceField>
+        <TextField label="prismaService" source="prismaService" />
         <ReferenceManyField
           reference="Transaction"
           target="serviceId"
@@ -46,6 +47,7 @@ export const ServiceShow = (props: ShowProps): React.ReactElement => {
             >
               <TextField source={SERVICE_TITLE_FIELD} />
             </ReferenceField>
+            <TextField label="prismaService" source="prismaService" />
           </Datagrid>
         </ReferenceManyField>
       </SimpleShowLayout>

@@ -9,4 +9,5 @@ export type UserCreateInput = {
   password: string;
   roles: InputJsonValue;
   ads?: AdCreateNestedManyWithoutUsersInput;
+  prismaService?: number | null;
 };

@@ -19,6 +19,7 @@ import {
   Min,
   Max,
   ValidateNested,
+  IsInt,
 } from "class-validator";
 import { UserWhereUniqueInput } from "../../user/base/UserWhereUniqueInput";
 import { Type } from "class-transformer";
@@ -86,6 +87,19 @@ class AdCreateInput {
     nullable: true,
   })
   services?: ServiceCreateNestedManyWithoutAdsInput;
+
+  @ApiProperty({
+    required: false,
+    type: Number,
+  })
+  @IsInt()
+  @Min(-999999999)
+  @Max(999999999)
+  @IsOptional()
+  @Field(() => Number, {
+    nullable: true,
+  })
+  prismaService?: number | null;
 }
 
 export { AdCreateInput as AdCreateInput };

@@ -1,6 +1,7 @@
 import { StringFilter } from "../../util/StringFilter";
 import { StringNullableFilter } from "../../util/StringNullableFilter";
 import { AdListRelationFilter } from "../ad/AdListRelationFilter";
+import { IntNullableFilter } from "../../util/IntNullableFilter";
 
 export type UserWhereInput = {
   id?: StringFilter;
@@ -9,4 +10,5 @@ export type UserWhereInput = {
   username?: StringFilter;
   email?: StringNullableFilter;
   ads?: AdListRelationFilter;
+  prismaService?: IntNullableFilter;
 };

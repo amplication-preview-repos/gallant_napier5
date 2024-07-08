@@ -33,6 +33,7 @@ export const AdCreate = (props: CreateProps): React.ReactElement => {
         >
           <SelectArrayInput optionText={ServiceTitle} />
         </ReferenceArrayInput>
+        <NumberInput step={1} label="prismaService" source="prismaService" />
       </SimpleForm>
     </Create>
   );

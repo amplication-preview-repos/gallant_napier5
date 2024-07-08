@@ -6,4 +6,5 @@ export type TransactionCreateInput = {
   buyer?: string | null;
   seller?: string | null;
   service?: ServiceWhereUniqueInput | null;
+  prismaService?: number | null;
 };

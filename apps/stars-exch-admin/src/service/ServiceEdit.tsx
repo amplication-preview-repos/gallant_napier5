@@ -9,6 +9,7 @@ import {
   SelectInput,
   ReferenceArrayInput,
   SelectArrayInput,
+  NumberInput,
 } from "react-admin";
 
 import { AdTitle } from "../ad/AdTitle";
@@ -31,6 +32,7 @@ export const ServiceEdit = (props: EditProps): React.ReactElement => {
         >
           <SelectArrayInput optionText={TransactionTitle} />
         </ReferenceArrayInput>
+        <NumberInput step={1} label="prismaService" source="prismaService" />
       </SimpleForm>
     </Edit>
   );
